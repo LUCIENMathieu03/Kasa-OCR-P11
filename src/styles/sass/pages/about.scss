@@ -1,0 +1,25 @@
+.aboutMain {
+  display: flex;
+  flex-direction: column;
+
+  &__collapses {
+    margin: 38px 0;
+    padding: 0 208px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .aboutMain {
+    &__collapses {
+      padding: 0 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutMain {
+    &__collapses {
+      margin: 19px 0;
+      padding: 0 20px;
+    }
+  }
+}

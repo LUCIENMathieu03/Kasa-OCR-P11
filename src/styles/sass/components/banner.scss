@@ -16,7 +16,6 @@
     text-shadow: 0px 4px 4px #00000040;
     font-weight: 700;
     font-size: 48px;
-    margin-left: 16px;
   }
 
   &__img {
@@ -33,6 +32,16 @@
   }
 }
 
+@media screen and (max-width: 1020px) {
+  .banner {
+    &__text {
+      &--wrapText {
+        display: block;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .banner {
     height: 111px;
@@ -43,6 +52,7 @@
     &__text {
       width: 258px;
       font-size: 24px;
+      margin-left: 16px;
     }
   }
 }

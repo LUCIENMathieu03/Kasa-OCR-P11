@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../styles/sass/layouts/header.scss'
 
 function Header() {
@@ -33,8 +34,12 @@ function Header() {
 
       <nav>
         <ul className="header__navigation">
-          <li>Accueil</li>
-          <li>A propos</li>
+          <li>
+            <Link to="/">Accueil</Link>
+          </li>
+          <li>
+            <Link to="/about">A propos</Link>
+          </li>
         </ul>
       </nav>
     </header>
