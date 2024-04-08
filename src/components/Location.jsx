@@ -1,15 +1,27 @@
+import { useNavigate } from 'react-router-dom'
 import '../styles/sass/pages/homepage.scss'
 
-function Location({ apartments }) {
-  console.log(apartments)
+function Location({ appartments }) {
+  const navigate = useNavigate()
+
+  const handleAppartmentClick = (clickedApartment) => {
+    navigate(`/appartment`, { state: { appartment: clickedApartment } })
+  }
+
   return (
     <section className="location">
-      {apartments.map((apartment) => {
+      {appartments.map((appartment) => {
         return (
-          <article key={apartment.id} className="location__apartmentCard">
+          <article
+            key={appartment.id}
+            className="location__apartmentCard"
+            onClick={() => handleAppartmentClick(appartment)}
+          >
             <div className="location__apartmentCard__gradient"></div>
-            <img src={apartment.cover} alt={apartment.title} />
-            <p className="location__apartmentCard__title">{apartment.title} </p>
+            <img src={appartment.cover} alt={appartment.title} />
+            <p className="location__apartmentCard__title">
+              {appartment.title}{' '}
+            </p>
           </article>
         )
       })}

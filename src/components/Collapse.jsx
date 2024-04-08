@@ -1,6 +1,24 @@
 import '../styles/sass/components/collapse.scss'
 
 function Collapse({ title, text }) {
+  const handleText = (text) => {
+    if (Array.isArray(text)) {
+      return (
+        <ul className="collapse__textBox__paragraph collapse__textBox__paragraph--closed">
+          {text.map((elem) => {
+            return <li key={`equipement-${elem}`}>{elem}</li>
+          })}
+        </ul>
+      )
+    } else {
+      return (
+        <p className="collapse__textBox__paragraph collapse__textBox__paragraph--closed">
+          {text}{' '}
+        </p>
+      )
+    }
+  }
+
   const toggleCollapse = (e) => {
     //Get the collapse elem
     const collapseTextElem = e.target
@@ -51,11 +69,7 @@ function Collapse({ title, text }) {
         </svg>
       </div>
 
-      <div className="collapse__textBox">
-        <p className="collapse__textBox__paragraph collapse__textBox__paragraph--closed">
-          {text}
-        </p>
-      </div>
+      <div className="collapse__textBox">{handleText(text)}</div>
     </div>
   )
 }

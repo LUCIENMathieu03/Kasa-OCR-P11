@@ -3,6 +3,9 @@
   flex-direction: column;
 
   &__collapses {
+    .collapse:not(:first-child) {
+      margin-top: 30px;
+    }
     margin: 38px 0;
     padding: 0 208px;
   }
@@ -18,6 +21,10 @@
 @media screen and (max-width: 767px) {
   .aboutMain {
     &__collapses {
+      .collapse:not(:first-child) {
+        margin-top: 20px;
+      }
+
       margin: 19px 0;
       padding: 0 20px;
     }
