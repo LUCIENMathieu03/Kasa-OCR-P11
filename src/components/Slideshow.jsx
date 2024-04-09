@@ -2,7 +2,7 @@ import '../styles/sass/components/slideshow.scss'
 import { useState, useEffect } from 'react'
 
 function Slideshow({ pictures }) {
-  const [appartmentPictures, setPicture] = useState(pictures)
+  const [appartmentPictures] = useState(pictures)
   const [imageDisplayedIndex, setImageIndex] = useState(0)
 
   useEffect(() => {
