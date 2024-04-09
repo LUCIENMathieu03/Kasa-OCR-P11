@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/react-github-pages.git/static/css/main.b5583f48.css",
-    "main.js": "/react-github-pages.git/static/js/main.93ff8645.js",
-    "index.html": "/react-github-pages.git/index.html",
-    "main.b5583f48.css.map": "/react-github-pages.git/static/css/main.b5583f48.css.map",
-    "main.93ff8645.js.map": "/react-github-pages.git/static/js/main.93ff8645.js.map"
+    "main.css": "/Kasa-OCR-P11/static/css/main.f562722b.css",
+    "main.js": "/Kasa-OCR-P11/static/js/main.be236a6b.js",
+    "index.html": "/Kasa-OCR-P11/index.html",
+    "static/media/rightArrow.svg": "/Kasa-OCR-P11/static/media/rightArrow.88153a5d119c2744ffe34dca1ef843df.svg",
+    "static/media/leftArrow.svg": "/Kasa-OCR-P11/static/media/leftArrow.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "main.f562722b.css.map": "/Kasa-OCR-P11/static/css/main.f562722b.css.map",
+    "main.be236a6b.js.map": "/Kasa-OCR-P11/static/js/main.be236a6b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5583f48.css",
-    "static/js/main.93ff8645.js"
+    "static/css/main.f562722b.css",
+    "static/js/main.be236a6b.js"
   ]
 }
