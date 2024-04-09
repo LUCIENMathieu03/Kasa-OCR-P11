@@ -78,7 +78,8 @@ function Appartment() {
 
   return (
     <div className="appartmentMain">
-      <Slideshow />
+      <Slideshow pictures={appartment.pictures} />
+
       <div className="appartmentMain__information">
         <div className="appartmentMain__information__grp1">
           <h1 className="appartmentMain__information__grp1__title">
