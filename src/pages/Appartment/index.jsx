@@ -1,12 +1,27 @@
 import '../../styles/sass/pages/appartment.scss'
-import { useLocation } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import data from '../../data/data.js'
 import Slideshow from '../../components/Slideshow'
 import Tag from '../../components/Tag'
 import Collapse from '../../components/Collapse'
 
 function Appartment() {
-  const location = useLocation()
-  const appartment = location.state.appartment
+  const { id } = useParams()
+  const [appartment, setAppartmentData] = useState()
+  const navigate = useNavigate()
+
+  //set the datas
+  useEffect(() => {
+    const selectedAppartment = data.find(
+      (appartmentData) => appartmentData.id.toString() === id.toString()
+    )
+    if (selectedAppartment) {
+      setAppartmentData(selectedAppartment)
+    } else {
+      navigate('error')
+    }
+  }, [id, navigate])
 
   const handleHostName = (fullName) => {
     const fullNameTable = fullName.split(' ')
@@ -20,7 +35,6 @@ function Appartment() {
   }
 
   const handleRating = (ratingNumber) => {
-    // const missingStars = 5 - parseInt(ratingNumber)
     const filledStar = (starKey) => {
       return (
         <svg
@@ -77,45 +91,47 @@ function Appartment() {
   }
 
   return (
-    <div className="appartmentMain">
-      <Slideshow pictures={appartment.pictures} />
+    appartment && (
+      <div className="appartmentMain">
+        <Slideshow pictures={appartment.pictures} />
 
-      <div className="appartmentMain__information">
-        <div className="appartmentMain__information__grp1">
-          <h1 className="appartmentMain__information__grp1__title">
-            {appartment.title}
-          </h1>
-          <p className="appartmentMain__information__grp1__location">
-            {appartment.location}
-          </p>
-          <div className="appartmentMain__information__grp1__tags">
-            {appartment.tags.map((tag) => {
-              return <Tag key={tag} tagText={tag} />
-            })}
-          </div>
-        </div>
-        <div className="appartmentMain__information__grp2">
-          <div className="appartmentMain__information__grp2__host">
-            <div className="appartmentMain__information__grp2__host__name">
-              {handleHostName(appartment.host.name)}
+        <div className="appartmentMain__information">
+          <div className="appartmentMain__information__grp1">
+            <h1 className="appartmentMain__information__grp1__title">
+              {appartment.title}
+            </h1>
+            <p className="appartmentMain__information__grp1__location">
+              {appartment.location}
+            </p>
+            <div className="appartmentMain__information__grp1__tags">
+              {appartment.tags.map((tag) => {
+                return <Tag key={tag} tagText={tag} />
+              })}
             </div>
-
-            <img
-              src={appartment.host.picture}
-              alt="host_photo"
-              className="appartmentMain__information__grp2__host__img"
-            />
           </div>
-          <div className="appartmentMain__information__grp2__stars">
-            {handleRating(appartment.rating)}
+          <div className="appartmentMain__information__grp2">
+            <div className="appartmentMain__information__grp2__host">
+              <div className="appartmentMain__information__grp2__host__name">
+                {handleHostName(appartment.host.name)}
+              </div>
+
+              <img
+                src={appartment.host.picture}
+                alt="host_photo"
+                className="appartmentMain__information__grp2__host__img"
+              />
+            </div>
+            <div className="appartmentMain__information__grp2__stars">
+              {handleRating(appartment.rating)}
+            </div>
           </div>
         </div>
+        <div className="appartmentMain__collapses">
+          <Collapse title="Description" text={appartment.description} />
+          <Collapse title="Équipements" text={appartment.equipments} />
+        </div>
       </div>
-      <div className="appartmentMain__collapses">
-        <Collapse title="Description" text={appartment.description} />
-        <Collapse title="Équipements" text={appartment.equipments} />
-      </div>
-    </div>
+    )
   )
 }
 

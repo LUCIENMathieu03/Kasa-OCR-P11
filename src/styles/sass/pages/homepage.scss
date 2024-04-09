@@ -11,6 +11,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   overflow: scroll;
 
+  a {
+    text-decoration: none;
+  }
+
   &__apartmentCard {
     position: relative;
     width: 340px;
