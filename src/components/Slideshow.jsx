@@ -55,6 +55,9 @@ function Slideshow({ pictures }) {
         <svg
           onClick={(e) => handleArrowClick(e)}
           className="slideshow__controls__arrowLeft slideshow__controls__arrow"
+          width="48"
+          height="80"
+          viewBox="0 0 48 80"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -66,6 +69,9 @@ function Slideshow({ pictures }) {
         <svg
           onClick={(e) => handleArrowClick(e)}
           className="slideshow__controls__arrowRight slideshow__controls__arrow"
+          width="48"
+          height="80"
+          viewBox="0 0 48 80"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
