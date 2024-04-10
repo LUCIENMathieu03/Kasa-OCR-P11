@@ -15,6 +15,7 @@ root.render(
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Kasa-OCR-P11/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/appartment/:id" element={<Appartment />} />
           <Route path="*" element={<ErrorPage />} />
