@@ -1,7 +1,7 @@
 import '../../styles/sass/pages/appartment.scss'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import data from '../../data/data.js'
+import data from '../../data/data.json'
 import Slideshow from '../../components/Slideshow'
 import Tag from '../../components/Tag'
 import Collapse from '../../components/Collapse'
@@ -28,8 +28,11 @@ function Appartment() {
 
     return (
       <>
-        <p>{fullNameTable[0]}</p>
-        <p>{fullNameTable[1]}</p>
+        <p>
+          {fullNameTable[0]}
+          <br />
+          {fullNameTable[1]}
+        </p>
       </>
     )
   }

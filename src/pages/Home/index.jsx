@@ -1,28 +1,12 @@
 import { useState, useEffect } from 'react'
 import Banner from '../../components/Banner'
 import Location from '../../components/Location'
-import data from '../../data/data.js'
+import data from '../../data/data.json'
 
 function Home() {
   const [appartmentAds, setAppartmentAds] = useState([])
 
-  // const URL = '../../data/data.json'
-  // async function fetchApartmentAds() {
-  //   try {
-  //     const response = await fetch(URL)
-  //     if (!response.ok) {
-  //       throw new Error('Erreur lors de la récupération des données')
-  //     }
-  //     const data = await response.json()
-  //     setApartmentAds(data)
-  //     console.log(data)
-  //   } catch (error) {
-  //     console.error('Erreur:', error.message)
-  //   }
-  // }
-
   useEffect(() => {
-    // fetchApartmentAds()
     setAppartmentAds(data)
   }, [])
 
