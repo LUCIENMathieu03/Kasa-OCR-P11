@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Kasa-OCR-P11/static/css/main.3e5871ff.css",
+    "main.css": "/Kasa-OCR-P11/static/css/main.b0e93d92.css",
     "main.js": "/Kasa-OCR-P11/static/js/main.b66dc08e.js",
     "index.html": "/Kasa-OCR-P11/index.html",
     "static/media/rightArrow.svg": "/Kasa-OCR-P11/static/media/rightArrow.88153a5d119c2744ffe34dca1ef843df.svg",
     "static/media/leftArrow.svg": "/Kasa-OCR-P11/static/media/leftArrow.19918a1634b1441a25ae0b50e6b1f85b.svg",
-    "main.3e5871ff.css.map": "/Kasa-OCR-P11/static/css/main.3e5871ff.css.map",
+    "main.b0e93d92.css.map": "/Kasa-OCR-P11/static/css/main.b0e93d92.css.map",
     "main.b66dc08e.js.map": "/Kasa-OCR-P11/static/js/main.b66dc08e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e5871ff.css",
+    "static/css/main.b0e93d92.css",
     "static/js/main.b66dc08e.js"
   ]
 }
