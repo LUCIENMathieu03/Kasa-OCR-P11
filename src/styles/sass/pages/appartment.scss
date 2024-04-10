@@ -14,6 +14,7 @@
     &__grp1__location {
       font-size: 18px;
       font-weight: 500;
+      margin-top: 5px;
     }
 
     &__grp1__tags {
@@ -67,6 +68,7 @@
     margin: 27px 20px;
     &__information {
       flex-direction: column;
+      margin-top: 15px;
 
       &__grp1__title {
         font-size: 18px;
@@ -83,6 +85,7 @@
       }
       &__grp2__host__name {
         font-size: 12px;
+        line-height: 17px;
       }
 
       &__grp2__host__img {
