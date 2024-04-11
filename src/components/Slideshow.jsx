@@ -11,11 +11,13 @@ function Slideshow({ pictures }) {
     const arrows = Array.from(
       document.querySelectorAll('.slideshow__controls__arrow')
     )
+    const pagination = document.querySelector('.slideshow__pagination p')
 
     if (appartmentPictures.length < 2) {
       arrows.map((arrow) =>
         arrow.classList.add('slideshow__controls__arrow--noArrow')
       )
+      pagination.classList.add('slideshow__pagination--noPagination')
     }
   }, [appartmentPictures.length])
 
