@@ -2,23 +2,24 @@ import { useState, useEffect } from 'react'
 import Banner from '../../components/Banner'
 import Location from '../../components/Location'
 import data from '../../data/data.json'
+import homeBanner from '../../styles/assets/home_banner.png'
 
 function Home() {
-  const [appartmentAds, setAppartmentAds] = useState([])
+    const [appartmentAds, setAppartmentAds] = useState([])
 
-  useEffect(() => {
-    setAppartmentAds(data)
-  }, [])
+    useEffect(() => {
+        setAppartmentAds(data)
+    }, [])
 
-  return (
-    <>
-      <Banner
-        text="Chez vous, et partout ailleurs"
-        imgLink="https://s3-alpha-sig.figma.com/img/4706/e7dd/e270fc8fc902a1eb738458e7b29c1899?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T8yr9Fkdk8mEnw9yT5ABxget1H7J6y0yY4NjOCh5Djk8yoL0x0sP4FVCmITv1JCuqeDor0wU-X2GyLi1MbfUZDIsQZvrZlVLENwwDLiNu5-K2eCw6Z~CpsvQ3aZzv03V-fQB-PNdFxEKZWDB~m47QBZ3OYijAv8Sm46mJcwgYlcNAMji3~wlC9jk-FvbZXFau08GEXjQPV40JudzWeznyihN8oCpFjNwDEUz1Ys0XGRDCCElu3mv3V-J5gUC1z8G3hYUnyLBHxm8HfQq5Gp-~SsecqSHAgHFk44ezMGqsZxAry-rNdfvtkyWkjEs-ctMO565WUtrjUk8FfBBVW0BhQ__"
-      />
-      <Location appartments={appartmentAds} />
-    </>
-  )
+    return (
+        <>
+            <Banner
+                text="Chez vous, et partout ailleurs"
+                imgLink={homeBanner}
+            />
+            <Location appartments={appartmentAds} />
+        </>
+    )
 }
 
 export default Home
