@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/Kasa-OCR-P11/static/css/main.c658f115.css",
-    "main.js": "/Kasa-OCR-P11/static/js/main.7a03bd5d.js",
+    "main.js": "/Kasa-OCR-P11/static/js/main.772475c7.js",
+    "static/media/about_banner.png": "/Kasa-OCR-P11/static/media/about_banner.267ac2c290cc7501e1c1.png",
+    "static/media/home_banner.png": "/Kasa-OCR-P11/static/media/home_banner.9a0b9b384459e705d7c3.png",
     "index.html": "/Kasa-OCR-P11/index.html",
     "static/media/rightArrow.svg": "/Kasa-OCR-P11/static/media/rightArrow.88153a5d119c2744ffe34dca1ef843df.svg",
     "static/media/leftArrow.svg": "/Kasa-OCR-P11/static/media/leftArrow.19918a1634b1441a25ae0b50e6b1f85b.svg",
     "main.c658f115.css.map": "/Kasa-OCR-P11/static/css/main.c658f115.css.map",
-    "main.7a03bd5d.js.map": "/Kasa-OCR-P11/static/js/main.7a03bd5d.js.map"
+    "main.772475c7.js.map": "/Kasa-OCR-P11/static/js/main.772475c7.js.map"
   },
   "entrypoints": [
     "static/css/main.c658f115.css",
-    "static/js/main.7a03bd5d.js"
+    "static/js/main.772475c7.js"
   ]
 }
