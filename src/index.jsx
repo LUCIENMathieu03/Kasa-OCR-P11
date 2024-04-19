@@ -10,17 +10,17 @@ import Layout from './components/Layout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Kasa-OCR-P11/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/appartment/:id" element={<Appartment />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </Layout>
-    </Router>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Router>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/Kasa-OCR-P11/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/appartment/:id" element={<Appartment />} />
+                    <Route path="*" element={<ErrorPage />} />
+                </Routes>
+            </Layout>
+        </Router>
+    </React.StrictMode>
 )
